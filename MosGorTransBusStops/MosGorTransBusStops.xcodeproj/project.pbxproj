@@ -13,6 +13,10 @@
 		3A6B3A6B27C641C000642EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6B3A6927C641C000642EB2 /* Main.storyboard */; };
 		3A6B3A6D27C641C000642EB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A6B3A6C27C641C000642EB2 /* Assets.xcassets */; };
 		3A6B3A7027C641C000642EB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6B3A6E27C641C000642EB2 /* LaunchScreen.storyboard */; };
+		3A6B3A7827C6422900642EB2 /* BusStopsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6B3A7727C6422900642EB2 /* BusStopsTableViewController.swift */; };
+		3A6B3A7B27C6432200642EB2 /* BusStopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6B3A7A27C6432200642EB2 /* BusStopModel.swift */; };
+		3A6B3A7E27C6435100642EB2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6B3A7D27C6435100642EB2 /* NetworkService.swift */; };
+		3A6B3A8127C6436B00642EB2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3A6B3A8027C6436B00642EB2 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		3A6B3A6C27C641C000642EB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A6B3A6F27C641C000642EB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A6B3A7127C641C000642EB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A6B3A7727C6422900642EB2 /* BusStopsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopsTableViewController.swift; sourceTree = "<group>"; };
+		3A6B3A7A27C6432200642EB2 /* BusStopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopModel.swift; sourceTree = "<group>"; };
+		3A6B3A7D27C6435100642EB2 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A6B3A8127C6436B00642EB2 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +64,34 @@
 		3A6B3A6227C641C000642EB2 /* MosGorTransBusStops */ = {
 			isa = PBXGroup;
 			children = (
+				3A6B3A7C27C6433E00642EB2 /* Service */,
+				3A6B3A7927C6430700642EB2 /* Model */,
 				3A6B3A6327C641C000642EB2 /* AppDelegate.swift */,
 				3A6B3A6527C641C000642EB2 /* SceneDelegate.swift */,
 				3A6B3A6727C641C000642EB2 /* ViewController.swift */,
+				3A6B3A7727C6422900642EB2 /* BusStopsTableViewController.swift */,
 				3A6B3A6927C641C000642EB2 /* Main.storyboard */,
 				3A6B3A6C27C641C000642EB2 /* Assets.xcassets */,
 				3A6B3A6E27C641C000642EB2 /* LaunchScreen.storyboard */,
 				3A6B3A7127C641C000642EB2 /* Info.plist */,
 			);
 			path = MosGorTransBusStops;
+			sourceTree = "<group>";
+		};
+		3A6B3A7927C6430700642EB2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A6B3A7A27C6432200642EB2 /* BusStopModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3A6B3A7C27C6433E00642EB2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3A6B3A7D27C6435100642EB2 /* NetworkService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +110,9 @@
 			dependencies = (
 			);
 			name = MosGorTransBusStops;
+			packageProductDependencies = (
+				3A6B3A8027C6436B00642EB2 /* Alamofire */,
+			);
 			productName = MosGorTransBusStops;
 			productReference = 3A6B3A6027C641C000642EB2 /* MosGorTransBusStops.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +141,9 @@
 				Base,
 			);
 			mainGroup = 3A6B3A5727C641C000642EB2;
+			packageReferences = (
+				3A6B3A7F27C6436B00642EB2 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 3A6B3A6127C641C000642EB2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +173,9 @@
 			files = (
 				3A6B3A6827C641C000642EB2 /* ViewController.swift in Sources */,
 				3A6B3A6427C641C000642EB2 /* AppDelegate.swift in Sources */,
+				3A6B3A7B27C6432200642EB2 /* BusStopModel.swift in Sources */,
+				3A6B3A7827C6422900642EB2 /* BusStopsTableViewController.swift in Sources */,
+				3A6B3A7E27C6435100642EB2 /* NetworkService.swift in Sources */,
 				3A6B3A6627C641C000642EB2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +396,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3A6B3A7F27C6436B00642EB2 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3A6B3A8027C6436B00642EB2 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A6B3A7F27C6436B00642EB2 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3A6B3A5827C641C000642EB2 /* Project object */;
 }
