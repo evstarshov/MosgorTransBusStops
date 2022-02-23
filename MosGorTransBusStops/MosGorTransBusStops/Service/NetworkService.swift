@@ -16,7 +16,7 @@ final class NetworkService {
         print("Getting bus stops")
         AF.request(url, method: .get).responseJSON { response in
             guard let data = response.data else { return }
-            print(String(decoding: response.data!, as: UTF8.self))
+            //print(String(decoding: response.data!, as: UTF8.self))
             DispatchQueue.main.async {
                 do {
                     let json = try JSONDecoder().decode(Welcome.self, from: data).data
