@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3A6B3A6427C641C000642EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6B3A6327C641C000642EB2 /* AppDelegate.swift */; };
 		3A6B3A6627C641C000642EB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6B3A6527C641C000642EB2 /* SceneDelegate.swift */; };
-		3A6B3A6827C641C000642EB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6B3A6727C641C000642EB2 /* ViewController.swift */; };
+		3A6B3A6827C641C000642EB2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6B3A6727C641C000642EB2 /* MapViewController.swift */; };
 		3A6B3A6B27C641C000642EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6B3A6927C641C000642EB2 /* Main.storyboard */; };
 		3A6B3A6D27C641C000642EB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A6B3A6C27C641C000642EB2 /* Assets.xcassets */; };
 		3A6B3A7027C641C000642EB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6B3A6E27C641C000642EB2 /* LaunchScreen.storyboard */; };
@@ -17,13 +17,14 @@
 		3A6B3A7B27C6432200642EB2 /* BusStopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6B3A7A27C6432200642EB2 /* BusStopModel.swift */; };
 		3A6B3A7E27C6435100642EB2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6B3A7D27C6435100642EB2 /* NetworkService.swift */; };
 		3A6B3A8127C6436B00642EB2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3A6B3A8027C6436B00642EB2 /* Alamofire */; };
+		3A6B3A8427C64AFD00642EB2 /* PickedBusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6B3A8327C64AFD00642EB2 /* PickedBusStop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A6B3A6027C641C000642EB2 /* MosGorTransBusStops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MosGorTransBusStops.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A6B3A6327C641C000642EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A6B3A6527C641C000642EB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3A6B3A6727C641C000642EB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3A6B3A6727C641C000642EB2 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3A6B3A6A27C641C000642EB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A6B3A6C27C641C000642EB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A6B3A6F27C641C000642EB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,6 +32,7 @@
 		3A6B3A7727C6422900642EB2 /* BusStopsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopsTableViewController.swift; sourceTree = "<group>"; };
 		3A6B3A7A27C6432200642EB2 /* BusStopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopModel.swift; sourceTree = "<group>"; };
 		3A6B3A7D27C6435100642EB2 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		3A6B3A8327C64AFD00642EB2 /* PickedBusStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickedBusStop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +90,8 @@
 		3A6B3A7C27C6433E00642EB2 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				3A6B3A7D27C6435100642EB2 /* NetworkService.swift */,
+				3A6B3A8627C64DAF00642EB2 /* Picked */,
+				3A6B3A8527C64D9F00642EB2 /* Network */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -96,10 +99,26 @@
 		3A6B3A8227C645C000642EB2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3A6B3A6727C641C000642EB2 /* ViewController.swift */,
+				3A6B3A6727C641C000642EB2 /* MapViewController.swift */,
 				3A6B3A7727C6422900642EB2 /* BusStopsTableViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3A6B3A8527C64D9F00642EB2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3A6B3A7D27C6435100642EB2 /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3A6B3A8627C64DAF00642EB2 /* Picked */ = {
+			isa = PBXGroup;
+			children = (
+				3A6B3A8327C64AFD00642EB2 /* PickedBusStop.swift */,
+			);
+			path = Picked;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,8 +198,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A6B3A6827C641C000642EB2 /* ViewController.swift in Sources */,
+				3A6B3A6827C641C000642EB2 /* MapViewController.swift in Sources */,
 				3A6B3A6427C641C000642EB2 /* AppDelegate.swift in Sources */,
+				3A6B3A8427C64AFD00642EB2 /* PickedBusStop.swift in Sources */,
 				3A6B3A7B27C6432200642EB2 /* BusStopModel.swift in Sources */,
 				3A6B3A7827C6422900642EB2 /* BusStopsTableViewController.swift in Sources */,
 				3A6B3A7E27C6435100642EB2 /* NetworkService.swift in Sources */,

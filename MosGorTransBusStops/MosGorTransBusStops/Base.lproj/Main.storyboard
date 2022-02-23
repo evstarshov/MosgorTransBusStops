@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +11,7 @@
         <!--Bus Stops Table View Controller-->
         <scene sceneID="h3G-SK-JsN">
             <objects>
-                <tableViewController id="1Uy-w8-ugf" customClass="BusStopsTableViewController" customModule="MosGorTransBusStops" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="tableVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1Uy-w8-ugf" customClass="BusStopsTableViewController" customModule="MosGorTransBusStops" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Hm8-jP-yGl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,8 +36,55 @@
             </objects>
             <point key="canvasLocation" x="1013" y="114"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="fek-Qt-Qjx">
+            <objects>
+                <viewController storyboardIdentifier="MapVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YYF-ir-PTq" customClass="MapViewController" customModule="MosGorTransBusStops" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DPX-eF-oI6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pt3-qv-1P8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Остановка" id="qEl-NP-3BE">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrowshape.turn.up.backward.fill" catalog="system" id="H18-re-pgq">
+                                            <connections>
+                                                <action selector="backButtonTapped" destination="YYF-ir-PTq" id="BuB-Q9-iCa"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Mew-eo-LfU">
+                                <rect key="frame" x="20" y="93" width="374" height="560"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gZo-iA-k5b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mew-eo-LfU" firstAttribute="top" secondItem="Pt3-qv-1P8" secondAttribute="bottom" constant="5" id="A6l-hB-hvA"/>
+                            <constraint firstItem="gZo-iA-k5b" firstAttribute="trailing" secondItem="Mew-eo-LfU" secondAttribute="trailing" constant="20" id="CLT-aa-9nh"/>
+                            <constraint firstItem="gZo-iA-k5b" firstAttribute="bottom" secondItem="Mew-eo-LfU" secondAttribute="bottom" constant="209" id="D66-L4-wR0"/>
+                            <constraint firstItem="Mew-eo-LfU" firstAttribute="leading" secondItem="gZo-iA-k5b" secondAttribute="leading" constant="20" id="IPt-Mx-ws4"/>
+                            <constraint firstItem="Pt3-qv-1P8" firstAttribute="leading" secondItem="gZo-iA-k5b" secondAttribute="leading" id="MLe-Sd-Ot0"/>
+                            <constraint firstItem="Pt3-qv-1P8" firstAttribute="centerX" secondItem="Mew-eo-LfU" secondAttribute="centerX" id="qbc-Bm-oEp"/>
+                            <constraint firstItem="Pt3-qv-1P8" firstAttribute="top" secondItem="gZo-iA-k5b" secondAttribute="top" id="yVt-np-NR7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="H18-re-pgq" id="FUm-NW-gTL"/>
+                        <outlet property="barTitle" destination="qEl-NP-3BE" id="mfg-Jg-tJj"/>
+                        <outlet property="mapView" destination="Mew-eo-LfU" id="j8V-cs-CsI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HJH-uo-GEB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2021.7391304347827" y="113.83928571428571"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

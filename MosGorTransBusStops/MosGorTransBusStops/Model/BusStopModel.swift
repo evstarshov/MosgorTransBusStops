@@ -15,7 +15,7 @@ struct Datum: Codable {
     let id: String
     let lat, lon: Double
     let name: String
-    let type: TypeElement
+    let type: TypeElement?
     let routeNumber, color, routeName, subwayID: String?
     let shareURL: String
     let wifi, usb: Bool
