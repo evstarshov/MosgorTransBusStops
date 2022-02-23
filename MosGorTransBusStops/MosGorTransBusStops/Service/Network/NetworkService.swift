@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 final class NetworkService {
     
@@ -29,4 +30,21 @@ final class NetworkService {
         }
     }
     
+    func getPickedStopRoutePath(complition: @escaping([RoutePath])->()) {
+        let pickedUrl = url + "/\(PickedStop.shared.busId)"
+        print("picking bus stop")
+        AF.request(pickedUrl, method: .get).responseJSON { response in
+            guard let data = response.data else { return }
+            
+            DispatchQueue.main.async {
+                do {
+                    let json = try JSONDecoder().decode(PickedWelcome.self, from: data).routePath
+                    let pickedBusStop: [RoutePath] = json
+                    complition(pickedBusStop)
+                } catch {
+                    print(error)
+                }
+            }
+        }
+    }
 }

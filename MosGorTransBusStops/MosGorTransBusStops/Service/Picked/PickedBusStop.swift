@@ -10,6 +10,9 @@ import Foundation
 
 final class PickedStop {
     static let shared = PickedStop()
-    var busId = Datum(id: "", lat: 0.0, lon: 0, name: "", type: nil, routeNumber: "", color: "", routeName: "", subwayID: "", shareURL: "", wifi: false, usb: false, transportType: nil, transportTypes: [TypeElement](), isFavorite: true, icon: nil, mapIcon: nil, mapIconSmall: nil, cityShuttle: false, electrobus: false)
+    var busId: String = ""
+    var latitude: Double = 0.0
+    var longiture: Double = 0.0
+    var stopName: String = ""
     private init() {}
 }

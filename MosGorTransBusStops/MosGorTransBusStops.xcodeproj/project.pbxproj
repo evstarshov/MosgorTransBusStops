@@ -18,6 +18,9 @@
 		3A6B3A7E27C6435100642EB2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6B3A7D27C6435100642EB2 /* NetworkService.swift */; };
 		3A6B3A8127C6436B00642EB2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3A6B3A8027C6436B00642EB2 /* Alamofire */; };
 		3A6B3A8427C64AFD00642EB2 /* PickedBusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6B3A8327C64AFD00642EB2 /* PickedBusStop.swift */; };
+		3A6B3A8B27C6680900642EB2 /* BusStopCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6B3A8A27C6680900642EB2 /* BusStopCellModel.swift */; };
+		3A6B3A8D27C6768100642EB2 /* PickedBusStopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6B3A8C27C6768100642EB2 /* PickedBusStopModel.swift */; };
+		3A6B3A9027C6808000642EB2 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3A6B3A8F27C6808000642EB2 /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,8 @@
 		3A6B3A7A27C6432200642EB2 /* BusStopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopModel.swift; sourceTree = "<group>"; };
 		3A6B3A7D27C6435100642EB2 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		3A6B3A8327C64AFD00642EB2 /* PickedBusStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickedBusStop.swift; sourceTree = "<group>"; };
+		3A6B3A8A27C6680900642EB2 /* BusStopCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopCellModel.swift; sourceTree = "<group>"; };
+		3A6B3A8C27C6768100642EB2 /* PickedBusStopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickedBusStopModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A6B3A9027C6808000642EB2 /* SwiftyJSON in Frameworks */,
 				3A6B3A8127C6436B00642EB2 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,7 +88,9 @@
 		3A6B3A7927C6430700642EB2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3A6B3A9127C6960900642EB2 /* Cell */,
 				3A6B3A7A27C6432200642EB2 /* BusStopModel.swift */,
+				3A6B3A8C27C6768100642EB2 /* PickedBusStopModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -121,6 +129,14 @@
 			path = Picked;
 			sourceTree = "<group>";
 		};
+		3A6B3A9127C6960900642EB2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3A6B3A8A27C6680900642EB2 /* BusStopCellModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,6 +155,7 @@
 			name = MosGorTransBusStops;
 			packageProductDependencies = (
 				3A6B3A8027C6436B00642EB2 /* Alamofire */,
+				3A6B3A8F27C6808000642EB2 /* SwiftyJSON */,
 			);
 			productName = MosGorTransBusStops;
 			productReference = 3A6B3A6027C641C000642EB2 /* MosGorTransBusStops.app */;
@@ -170,6 +187,7 @@
 			mainGroup = 3A6B3A5727C641C000642EB2;
 			packageReferences = (
 				3A6B3A7F27C6436B00642EB2 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				3A6B3A8E27C6808000642EB2 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 3A6B3A6127C641C000642EB2 /* Products */;
 			projectDirPath = "";
@@ -200,9 +218,11 @@
 			files = (
 				3A6B3A6827C641C000642EB2 /* MapViewController.swift in Sources */,
 				3A6B3A6427C641C000642EB2 /* AppDelegate.swift in Sources */,
+				3A6B3A8B27C6680900642EB2 /* BusStopCellModel.swift in Sources */,
 				3A6B3A8427C64AFD00642EB2 /* PickedBusStop.swift in Sources */,
 				3A6B3A7B27C6432200642EB2 /* BusStopModel.swift in Sources */,
 				3A6B3A7827C6422900642EB2 /* BusStopsTableViewController.swift in Sources */,
+				3A6B3A8D27C6768100642EB2 /* PickedBusStopModel.swift in Sources */,
 				3A6B3A7E27C6435100642EB2 /* NetworkService.swift in Sources */,
 				3A6B3A6627C641C000642EB2 /* SceneDelegate.swift in Sources */,
 			);
@@ -434,6 +454,14 @@
 				kind = branch;
 			};
 		};
+		3A6B3A8E27C6808000642EB2 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -441,6 +469,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3A6B3A7F27C6436B00642EB2 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		3A6B3A8F27C6808000642EB2 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A6B3A8E27C6808000642EB2 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
