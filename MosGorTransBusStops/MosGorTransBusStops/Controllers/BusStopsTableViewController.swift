@@ -8,30 +8,33 @@
 import UIKit
 
 class BusStopsTableViewController: UITableViewController {
+    
+    let networkService = NetworkService()
+    
+    var busStops = [Datum]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        networkService.getBusStops { [weak self] stops in
+            self?.busStops = stops
+        }
+        
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return busStops.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return busStops.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
@@ -39,7 +42,7 @@ class BusStopsTableViewController: UITableViewController {
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

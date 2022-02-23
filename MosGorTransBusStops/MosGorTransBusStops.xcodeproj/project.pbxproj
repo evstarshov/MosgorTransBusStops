@@ -64,12 +64,11 @@
 		3A6B3A6227C641C000642EB2 /* MosGorTransBusStops */ = {
 			isa = PBXGroup;
 			children = (
+				3A6B3A8227C645C000642EB2 /* Controllers */,
 				3A6B3A7C27C6433E00642EB2 /* Service */,
 				3A6B3A7927C6430700642EB2 /* Model */,
 				3A6B3A6327C641C000642EB2 /* AppDelegate.swift */,
 				3A6B3A6527C641C000642EB2 /* SceneDelegate.swift */,
-				3A6B3A6727C641C000642EB2 /* ViewController.swift */,
-				3A6B3A7727C6422900642EB2 /* BusStopsTableViewController.swift */,
 				3A6B3A6927C641C000642EB2 /* Main.storyboard */,
 				3A6B3A6C27C641C000642EB2 /* Assets.xcassets */,
 				3A6B3A6E27C641C000642EB2 /* LaunchScreen.storyboard */,
@@ -92,6 +91,15 @@
 				3A6B3A7D27C6435100642EB2 /* NetworkService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		3A6B3A8227C645C000642EB2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A6B3A6727C641C000642EB2 /* ViewController.swift */,
+				3A6B3A7727C6422900642EB2 /* BusStopsTableViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
